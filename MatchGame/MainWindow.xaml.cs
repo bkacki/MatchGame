@@ -19,6 +19,34 @@ namespace MatchGame
         public MainWindow()
         {
             InitializeComponent();
+            SetUpGame();
+
+        }
+
+        private void SetUpGame()
+        {
+            List<string> foodEmoji = new List<string>()
+            {
+                "🍕", "🍕",
+                "🍣", "🍣",
+                "🍬", "🍬",
+                "🍉", "🍉",
+                "🍒", "🍒",
+                "🍀", "🍀",
+                "🌵", "🌵",
+                "🍖", "🍖",
+            };
+
+            Random random = new Random();
+
+            foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>()) 
+            {
+                int index = random.Next(foodEmoji.Count);
+                string nextEmoji = foodEmoji[index];
+                textBlock.Text = nextEmoji;
+                foodEmoji.RemoveAt(index);
+            }
+
         }
     }
 }
