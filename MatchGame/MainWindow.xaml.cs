@@ -25,8 +25,6 @@ namespace MatchGame
         public MainWindow()
         {
             InitializeComponent();
-<<<<<<< Updated upstream
-=======
 
             timer.Interval = TimeSpan.FromSeconds(.1);
             timer.Tick += Timer_Tick;
@@ -103,7 +101,7 @@ namespace MatchGame
                 lastTextBlockClicked.Visibility = Visibility.Visible;
                 findingMatch = false;
             }
->>>>>>> Stashed changes
+
         }
 
         private void TimeTextBlock_MouseDown(object sender, MouseButtonEventArgs e)
